@@ -159,15 +159,35 @@
 
 @keyframes celebrate {
   0%, 100% { transform: scale(1) rotate(0deg); }
-  25% { transform: scale(1.1) rotate(-5deg); }
-  75% { transform: scale(1.1) rotate(5deg); }
+  25% { transform: scale(1.02) rotate(-1deg); }
+  75% { transform: scale(1.02) rotate(1deg); }
 }
 
 @keyframes coins-fall {
-  0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
-  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+  0% { 
+    transform: translateY(-100px) rotate(0deg) scale(1); 
+    opacity: 1; 
+  }
+  50% {
+    opacity: 1;
+  }
+  100% { 
+    transform: translateY(100vh) rotate(720deg) scale(0.5); 
+    opacity: 0; 
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
 }
 
 .animate-celebrate {
   animation: celebrate 0.5s ease-in-out;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent 0%, hsl(var(--gold) / 0.3) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
 }
