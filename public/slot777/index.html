@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1a0a2e">
+    <title>Slot 777 - স্লট মেশিন গেম</title>
+    <meta name="description" content="Slot 777 - মোবাইল স্লট মেশিন গেম। ভাগ্য পরীক্ষা করুন এবং বড় জয় করুন!">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background -->
+    <div class="background-overlay"></div>
+    
+    <!-- Decorative top lights -->
+    <div class="top-lights"></div>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Title -->
+        <div class="title-section">
+            <span class="sparkle left">✨</span>
+            <h1 class="title">SLOT 777</h1>
+            <span class="sparkle right">✨</span>
+        </div>
+        <p class="subtitle">ভাগ্য পরীক্ষা করুন!</p>
+        
+        <!-- Sound Toggle -->
+        <button class="sound-toggle" id="soundToggle">
+            <span class="sound-on">🔊</span>
+            <span class="sound-off" style="display: none;">🔇</span>
+        </button>
+        
+        <!-- Coin Display -->
+        <div class="coin-display">
+            <img src="images/coin.png" alt="coin" class="coin-icon">
+            <span class="coin-amount" id="coinAmount">100</span>
+        </div>
+        
+        <!-- Slot Machine -->
+        <div class="slot-machine" id="slotMachine">
+            <div class="machine-inner">
+                <!-- Pay Line Label -->
+                <div class="payline-label">PAY LINE</div>
+                
+                <!-- Reels Container -->
+                <div class="reels-wrapper">
+                    <!-- Win Line -->
+                    <div class="win-line"></div>
+                    
+                    <div class="reels">
+                        <div class="reel" id="reel1">
+                            <img src="images/seven.png" alt="symbol" class="symbol">
+                        </div>
+                        <div class="reel" id="reel2">
+                            <img src="images/seven.png" alt="symbol" class="symbol">
+                        </div>
+                        <div class="reel" id="reel3">
+                            <img src="images/seven.png" alt="symbol" class="symbol">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Message -->
+                <div class="message" id="message">স্পিন করুন!</div>
+                
+                <!-- Bet Controls -->
+                <div class="bet-controls">
+                    <button class="bet-btn" id="betDown">−</button>
+                    <div class="bet-display">
+                        <span class="bet-label">বাজি</span>
+                        <span class="bet-amount" id="betAmount">10</span>
+                    </div>
+                    <button class="bet-btn" id="betUp">+</button>
+                </div>
+                
+                <!-- Spin Button -->
+                <button class="spin-btn" id="spinBtn">স্পিন</button>
+            </div>
+        </div>
+        
+        <!-- Paytable -->
+        <div class="paytable">
+            <p class="paytable-title">পুরস্কার টেবিল</p>
+            <div class="paytable-grid">
+                <div class="paytable-item">
+                    <img src="images/seven.png" alt="seven">
+                    <span>×10</span>
+                </div>
+                <div class="paytable-item">
+                    <img src="images/diamond.png" alt="diamond">
+                    <span>×7</span>
+                </div>
+                <div class="paytable-item">
+                    <img src="images/bell.png" alt="bell">
+                    <span>×5</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Win Rate -->
+        <p class="win-rate">জেতার সম্ভাবনা: ১০%</p>
+        
+        <!-- Add Coins Button (hidden by default) -->
+        <button class="add-coins-btn" id="addCoinsBtn" style="display: none;">+১০০ কয়েন যোগ করুন</button>
+    </div>
+    
+    <!-- Win Celebration Coins Container -->
+    <div class="celebration-container" id="celebrationContainer"></div>
+    
+    <!-- Win Flash -->
+    <div class="win-flash" id="winFlash"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
